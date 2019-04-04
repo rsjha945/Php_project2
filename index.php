@@ -26,11 +26,12 @@
                 <h4>Email</h4>'.$email.'</p>
                 <h4>Message<h4>'.$message.'</p>';
 
-              if(mail($toEmail,$subject,$body)){
+              if(mail($toEmail,$subject,$body,"FROM: {$_POST['email']}")){
                   //Email sent
                   $msg = 'Your message has been sent';
                   $msgClass = 'alert-success';
               }  
+                $_POST = [];  //If the ail was sent there no need to show the value again in the form so,$_POST will clear these values.
               else{
                   //sending failed
                 $msg = 'Your email was not sent';
