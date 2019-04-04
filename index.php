@@ -1,4 +1,5 @@
 <?php
+//Thiis is a simple contact form in which we send the eamil using php.
     $msg = '';
     $msgClass ='';
     //check for form submit
@@ -31,7 +32,7 @@
                   $msg = 'Your message has been sent';
                   $msgClass = 'alert-success';
               }  
-                $_POST = [];  //If the ail was sent there no need to show the value again in the form so,$_POST will clear these values.
+                $_POST = [];  //If the mail was sent there no need to show the value again in the form so,$_POST[] will clear these values.
               else{
                   //sending failed
                 $msg = 'Your email was not sent';
